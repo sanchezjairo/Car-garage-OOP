@@ -1,7 +1,7 @@
 from vehicle import vehicle 
 
 class supercar(vehicle):
-    def __init__(self, make, name, price, year, color,Horsepower,NumbOfUnits):
+    def __init__(self, make, name, price, year, color,speed,Horsepower,NumbOfUnits,autopilot):
         super().__init__(make,name,price,year,color)
         self.Horsepower = Horsepower
         self.__NumbofUnits = NumbOfUnits
@@ -20,7 +20,23 @@ class supercar(vehicle):
         print(f'Your {self.make} {self.name} {self.color} {self.year} with {self.Horsepower}HP with only {self.__NumbofUnits} units in the world is worth {self.price}')
         return
 
-Ferrari = supercar("Ferrari", '250 GT SWB California Spyder', 10000000, 1961, "Red", 380, 9000)
-Ferrari.rarityCheck()
-Ferrari.priceloss()
+
+# Ferrari = supercar("Ferrari", '250 GT SWB California Spyder', 10000000, 1961, "Red",350,380,9000, False)
+
+# McLaren = supercar('McLaren', 'F1', 1000000, 1961, "red", 231, 627,4000, False  )
+
+# Ferrari.SupercargetInfo()
+
+# McLaren.SupercargetInfo()
+
+# McLaren.rarityCheck()
+
+# Ferrari.rarityCheck()
+
+# Ferrari.priceloss()
+# McLaren.priceloss()
+
+# Ferrari.SupercargetInfo()
+
+# McLaren.getInfo()
 

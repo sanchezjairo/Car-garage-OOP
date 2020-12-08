@@ -16,4 +16,6 @@ class vehicle():
             self.price -= self.price *.25
         else:
             self.price -= self.price * .15
-            
+
+    def getcolor(self):
+        print(f'your vehicles color is {self.color}')
