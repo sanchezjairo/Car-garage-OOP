@@ -1,0 +1,26 @@
+from vehicle import vehicle 
+
+class supercar(vehicle):
+    def __init__(self, make, name, price, year, color,Horsepower,NumbOfUnits):
+        super().__init__(make,name,price,year,color)
+        self.Horsepower = Horsepower
+        self.__NumbofUnits = NumbOfUnits
+# This method lets you add more horspoer to your supercar!
+    def addHorsepower(self,horsepower):
+        self.horsepower  = self.horsepower + horsepower
+        print(f'Your cars total horspower is {self.horsepower}!')
+
+    def rarityCheck(self):
+        if self.__NumbofUnits in range(5000):
+            print('Wow your Car is really rare!')
+        else:
+            print('Your car is still really cool!')
+
+    def SupercargetInfo(self):
+        print(f'Your {self.make} {self.name} {self.color} {self.year} with {self.Horsepower}HP with only {self.__NumbofUnits} units in the world is worth {self.price}')
+        return
+
+Ferrari = supercar("Ferrari", '250 GT SWB California Spyder', 10000000, 1961, "Red", 380, 9000)
+Ferrari.rarityCheck()
+Ferrari.priceloss()
+

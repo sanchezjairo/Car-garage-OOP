@@ -1,18 +1,19 @@
-class car():
-    def __init__(self, make, name, price, year, color):
-        self.name = name
-        self.make = make
-        self.year = year
-        self.price = price
-        self.color = color
+from vehicle import vehicle
+class car(vehicle):
+    def __init__(self, make, name, speed, price, year, color,autopilot):
+        super().__init__(make,name,price,year,color)
+        self.speed = speed
+        self.autopilot = bool(autopilot)
 
-    # This method returnts the information of the car
-    def getInfo(self):
-        print(f'Your {self.make} {self.name} {self.color} {self.year} is worth {self.price}')
-        return
-
-    def priceloss(self):
-        if self.year >= 2015:
-            self.price -= self.price *.25
+    def Maxspeed(self):
+        if self.speed > 160:
+            print('Wow this is too fast for me')
         else:
-            self.price -= self.price * .15
+            print('This is just perfect speed for me')
+        
+    def Autopilot(self):
+        if self.autopilot == False:
+            print('Ok no autopilot its fine')
+        else:
+            print('Wow it has auto pilot nap time!')
+
