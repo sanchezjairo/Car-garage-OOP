@@ -4,13 +4,13 @@ class car(vehicle):
         super().__init__(make,name,price,year,color)
         self.speed = speed
         self.autopilot = bool(autopilot)
-
+# This method gets the max speed and checks if its too fast
     def Maxspeed(self):
         if self.speed > 160:
             print('Wow this is too fast for me')
         else:
             print('This is just perfect speed for me')
-        
+# This method checks if the vehicle has auto pilot      
     def Autopilot(self):
         if self.autopilot == False:
             print('Ok no autopilot its fine')
